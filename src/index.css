@@ -32,10 +32,15 @@
   --surface-color: rgb(30, 41, 59);
   --text-color: rgb(248, 250, 252);
   --text-secondary-color: rgb(203, 213, 225);
+  /* =========
+      Border
+    =========*/
+  --border-radius: 20px;
 }
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 html,
 body,
@@ -49,7 +54,6 @@ body,
 }
 body {
   font-family: var(--font-family);
-  /* background-color: var(--bg-color); */
   color: var(--text-color);
   font-weight: var(--p-text-weight);
   font-size: var(--p-text-size);
