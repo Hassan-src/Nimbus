@@ -35,7 +35,7 @@
   /* =========
       Border
     =========*/
-  --border-radius: 20px;
+  --border-radius: 5px;
 }
 * {
   margin: 0;
@@ -70,4 +70,12 @@ h2 {
 h3 {
   font-weight: var(--h3-text-weight);
   font-size: var(--h3-text-size);
+}
+input {
+  font-family: var(--font-family);
+  font-size: var(--p-text-size);
+  border-radius: var(--border-radius);
+  &:focus {
+    outline: none;
+  }
 }

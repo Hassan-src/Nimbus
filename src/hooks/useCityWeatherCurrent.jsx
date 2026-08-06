@@ -4,9 +4,12 @@ import { getCityWeatherCurrent } from "../services/api.js";
 function useCityWeatherCurrent(city) {
   const [curWeather, setCurWeather] = useState(null);
   const [curWeatherCondition, setCurWeatherCondition] = useState(null);
+  const [curWeatherConditionCode, setCurWeatherConditionCode] = useState(null);
   const [curContry, setCurCountry] = useState("");
   const [curCity, setCurCity] = useState("");
   const [curLocalTime, setCurLocalTime] = useState("");
+  const [curDate, setCurDate] = useState("");
+  const [isDay, setIsDay] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   useEffect(
@@ -16,11 +19,16 @@ function useCityWeatherCurrent(city) {
         try {
           setLoading(true);
           const data = await getCityWeatherCurrent(city);
+          const dateTime = data?.location?.localtime;
+          const [date, time] = dateTime.split(" ");
           setCurWeather(data);
           setCurWeatherCondition(data?.current?.condition?.text);
+          setCurWeatherConditionCode(data?.current?.condition?.code);
           setCurCountry(data?.location?.country);
           setCurCity(data?.location?.name);
-          setCurLocalTime(data?.location?.localtime);
+          setCurLocalTime(time);
+          setCurDate(date);
+          setIsDay(data?.current?.is_day);
         } catch (err) {
           setError(err.message);
         } finally {
@@ -36,9 +44,12 @@ function useCityWeatherCurrent(city) {
     error,
     curWeather,
     curWeatherCondition,
+    curWeatherConditionCode,
     curContry,
     curCity,
     curLocalTime,
+    curDate,
+    isDay,
   };
 }
 

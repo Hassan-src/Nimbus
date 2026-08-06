@@ -1,5 +1,5 @@
 import styles from "./Logo.module.css";
-import logo from "../assets/Logo.avif";
+import logo from "../../assets/Logo.avif";
 function Logo() {
   return (
     <div className={styles.logo}>
