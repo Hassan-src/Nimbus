@@ -1,0 +1,39 @@
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  padding: var(--spacing-md);
+  .info {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: var(--spacing-md);
+    .weatherCondition {
+      font-weight: 700;
+      font-size: 2rem;
+      letter-spacing: 0.1rem;
+    }
+    .location {
+      font-size: 0.9rem;
+      margin-bottom: var(--spacing-md);
+    }
+    .mainTemp {
+      font-weight: 700;
+      font-size: 2rem;
+    }
+    .highTemp,
+    .lowTemp {
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+    .lowTemp {
+      color: var(--secondary-color);
+      margin-left: var(--spacing-xsm);
+      font-size: 1.1rem;
+    }
+  }
+  .weatherImage {
+    width: 200px;
+  }
+}

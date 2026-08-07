@@ -12,3 +12,11 @@ export function getCityWeatherCurrent(city) {
     `current.json?key=${KEY}&q=${encodeURIComponent(city)}&aqi=no`,
   );
 }
+
+export function getFutureForcast(city, days = 6) {
+  return fetchWeather(
+    `forecast.json?key=${KEY}&q=${encodeURIComponent(
+      city,
+    )}&days=${days}&aqi=no&alerts=no`,
+  );
+}

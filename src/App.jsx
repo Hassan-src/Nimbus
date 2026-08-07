@@ -4,7 +4,7 @@ import Logo from "./components/Header/Logo";
 import Header from "./components/Header/Header";
 import SearchBar from "./components/Header/SearchBar";
 import { MainProvider } from "./context/MainProvider";
-import MainWeatherInfo from "./components/MainWeatherInfo";
+import MainWeatherInfo from "./components/TodayDetails/MainWeatherInfo";
 function App() {
   return (
     <MainProvider>

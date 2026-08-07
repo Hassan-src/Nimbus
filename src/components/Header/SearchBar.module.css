@@ -1,8 +1,9 @@
 .searchBarForm {
   margin: 0 auto;
+  display: flex;
+  align-items: center;
 }
 .searchBar {
-  border: 3px solid red;
   width: clamp(200px, 30vw, 500px);
   background-image: url(src/assets/Search.svg);
   background-repeat: no-repeat;
@@ -10,4 +11,7 @@
   background-position: 8px center;
   padding: var(--spacing-xsm);
   padding-left: 40px;
+}
+.searchBoxButton {
+  padding: var(--spacing-sm);
 }

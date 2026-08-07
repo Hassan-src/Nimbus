@@ -53,6 +53,7 @@ body,
   flex-direction: column;
 }
 body {
+  background: var(--bg-color);
   font-family: var(--font-family);
   color: var(--text-color);
   font-weight: var(--p-text-weight);
@@ -73,9 +74,36 @@ h3 {
 }
 input {
   font-family: var(--font-family);
-  font-size: var(--p-text-size);
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
   border-radius: var(--border-radius);
+  text-transform: capitalize;
+  background-color: transparent;
+  padding: var(--spacing-sm) 0;
+  color: var(--text-color);
+  border: none;
   &:focus {
     outline: none;
+  }
+}
+span {
+  text-transform: capitalize;
+}
+ul,
+li {
+  list-style: none;
+}
+button {
+  font-family: var(--font-family);
+  padding: var(--spacing-xsm) var(--spacing-sm);
+  border: none;
+  align-items: center;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  transition: box-shadow 0.2s ease;
+  border-radius: var(--border-radius);
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 0 15px 1px rgb(56, 189, 248);
   }
 }

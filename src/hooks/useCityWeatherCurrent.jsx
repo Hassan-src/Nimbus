@@ -9,6 +9,10 @@ function useCityWeatherCurrent(city) {
   const [curCity, setCurCity] = useState("");
   const [curLocalTime, setCurLocalTime] = useState("");
   const [curDate, setCurDate] = useState("");
+  const [curTemp, setCurTemp] = useState("");
+  const [curChanceRain, setChanceRain] = useState("");
+  const [curWindSpeed, setWindSpeed] = useState("");
+  const [curHumidity, setHumidity] = useState("");
   const [isDay, setIsDay] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -24,6 +28,10 @@ function useCityWeatherCurrent(city) {
           setCurWeather(data);
           setCurWeatherCondition(data?.current?.condition?.text);
           setCurWeatherConditionCode(data?.current?.condition?.code);
+          setChanceRain(data?.current?.chance_of_rain);
+          setCurTemp(data?.current?.temp_c);
+          setWindSpeed(data?.current?.wind_mph);
+          setHumidity(data?.current?.humidity);
           setCurCountry(data?.location?.country);
           setCurCity(data?.location?.name);
           setCurLocalTime(time);
@@ -49,6 +57,10 @@ function useCityWeatherCurrent(city) {
     curCity,
     curLocalTime,
     curDate,
+    curTemp,
+    curChanceRain,
+    curWindSpeed,
+    curHumidity,
     isDay,
   };
 }
