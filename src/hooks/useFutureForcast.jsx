@@ -22,7 +22,7 @@ function useFutureForcast(city) {
         try {
           setLoading(true);
           const data = await getFutureForcast(city);
-          setFutureData(data);
+          setFutureData(data?.forecast);
           setTodayMaxTemp(data?.forecast?.forecastday[0]?.day?.maxtemp_c);
           setTodayMinTemp(data?.forecast?.forecastday[0]?.day?.mintemp_c);
           setTodaySunRise(data?.forecast?.forecastday[0]?.astro?.sunrise);

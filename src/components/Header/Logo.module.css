@@ -2,31 +2,19 @@
   border-radius: var(--border-radius);
   width: fit-content;
   height: fit-content;
-  position: absolute;
-  top: 0;
   display: flex;
   align-items: center;
   padding: var(--spacing-sm);
-  margin: var(--spacing-md);
   gap: var(--spacing-md);
-  background: rgba(255, 255, 255, 0.12);
+  background: transparent;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.15),
-    inset 0 1px 1px rgba(255, 255, 255, 0.35);
   &::after {
     content: "";
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.35) 0%,
-      rgba(255, 255, 255, 0.12) 35%,
-      rgba(255, 255, 255, 0.02) 100%
-    );
+    background: linear-gradient(90deg, rgb(0, 0, 0, 0.5));
     pointer-events: none;
   }
   & > * {
@@ -34,10 +22,9 @@
     z-index: 1;
   }
   h1 {
-    color: black;
     font-size: 1.4rem;
     font-weight: 700;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.1rem;
   }
   img {
     width: 42px;

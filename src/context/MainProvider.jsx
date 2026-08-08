@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import useCityWeatherCurrent from "../hooks/useCityWeatherCurrent";
 import useFutureForcast from "../hooks/useFutureForcast";
 

@@ -53,7 +53,6 @@ body,
   flex-direction: column;
 }
 body {
-  background: var(--bg-color);
   font-family: var(--font-family);
   color: var(--text-color);
   font-weight: var(--p-text-weight);
@@ -78,7 +77,7 @@ input {
   letter-spacing: 0.1rem;
   border-radius: var(--border-radius);
   text-transform: capitalize;
-  background-color: transparent;
+  background: transparent;
   padding: var(--spacing-sm) 0;
   color: var(--text-color);
   border: none;
@@ -94,14 +93,17 @@ li {
   list-style: none;
 }
 button {
-  font-family: var(--font-family);
-  padding: var(--spacing-xsm) var(--spacing-sm);
-  border: none;
+  display: flex;
   align-items: center;
-  color: var(--text-color);
+  justify-content: center;
   background-color: var(--primary-color);
-  transition: box-shadow 0.2s ease;
+  padding: var(--spacing-xsm) var(--spacing-sm);
+  font-family: var(--font-family);
+  text-transform: capitalize;
+  color: var(--text-color);
+  border: none;
   border-radius: var(--border-radius);
+  transition: box-shadow 0.2s ease;
   &:hover {
     cursor: pointer;
     box-shadow: 0 0 15px 1px rgb(56, 189, 248);

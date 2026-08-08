@@ -2,16 +2,25 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
+  position: relative;
 }
 .searchBar {
   width: clamp(200px, 30vw, 500px);
-  background-image: url(src/assets/Search.svg);
+  background-image:
+    linear-gradient(90deg, rgb(0, 0, 0, 0.5)), url(src/assets/Search.svg);
   background-repeat: no-repeat;
-  background-size: 25px 25px;
-  background-position: 8px center;
-  padding: var(--spacing-xsm);
+  background-size:
+    100% 100%,
+    25px 25px;
+  background-position:
+    center,
+    8px center;
+  padding: var(--spacing-sm);
   padding-left: 40px;
+  padding-right: 90px;
 }
 .searchBoxButton {
-  padding: var(--spacing-sm);
+  padding: var(--spacing-xsm) var(--spacing-md);
+  position: absolute;
+  right: 6px;
 }

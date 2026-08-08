@@ -1,0 +1,58 @@
+.upComing {
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: var(--spacing-sm);
+  .forcastList {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+    .forcast {
+      width: 220px;
+      height: 100%;
+      padding: var(--spacing-lg);
+      background: linear-gradient(
+        180deg,
+        rgb(0, 0, 0, 0.4) 0%,
+        rgb(58, 64, 64, 0.2) 100%
+      );
+      border-radius: var(--border-radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: var(--spacing-xsm);
+      .forcastDay {
+        font-weight: 600;
+        font-size: 1.2rem;
+      }
+      .forcastDate {
+        font-size: 0.8rem;
+      }
+      .forcastImage {
+        width: 65px;
+      }
+      .highTemp,
+      .lowTemp {
+        font-weight: 600;
+        font-size: 1.2rem;
+      }
+      .lowTemp {
+        color: var(--secondary-color);
+        margin-left: var(--spacing-xsm);
+        font-size: 1.1rem;
+      }
+      .weatherCondition {
+        font-weight: 500;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

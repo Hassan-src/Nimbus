@@ -8,11 +8,11 @@ import MainWeatherInfo from "./components/TodayDetails/MainWeatherInfo";
 function App() {
   return (
     <MainProvider>
-      <Header>
-        <Logo />
-        <SearchBar />
-      </Header>
       <Main>
+        <Header>
+          <Logo />
+          <SearchBar />
+        </Header>
         <MainWeatherInfo />
       </Main>
     </MainProvider>
