@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 import useCityWeatherCurrent from "../hooks/useCityWeatherCurrent";
-import useFutureForcast from "../hooks/useFutureForcast";
+import useFutureForecast from "../hooks/useFutureForecast";
 
 const WeatherContext = createContext();
 function MainProvider({ children }) {
@@ -31,7 +31,7 @@ function MainProvider({ children }) {
     todaySunSet,
     error: futureDataError,
     loading: futureDataLoading,
-  } = useFutureForcast(city);
+  } = useFutureForecast(city);
   return (
     <WeatherContext.Provider
       value={{

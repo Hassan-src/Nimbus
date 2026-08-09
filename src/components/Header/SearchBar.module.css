@@ -27,6 +27,9 @@
 .mobileSearchOpener {
   opacity: 0;
 }
+.searchBarFormMobile {
+  opacity: 0;
+}
 @media only screen and (max-width: 1040px) {
   .searchBarForm {
     margin: 0 0 0 var(--spacing-lg);

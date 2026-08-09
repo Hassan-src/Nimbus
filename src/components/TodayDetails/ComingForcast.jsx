@@ -1,5 +1,5 @@
 import useWeatherPost from "../../context/useWeatherPost";
-import styles from "./ComingForcast.module.css";
+import styles from "./ComingForecast.module.css";
 import sunny from "../../assets/Weather-sunny.svg";
 import mist from "../../assets/Weather-mist.svg";
 import partlyCloudy from "../../assets/Weather-partlycloudy.svg";
@@ -8,7 +8,7 @@ import storm from "../../assets/Weather-storm.svg";
 import thunderStorm from "../../assets/Weather-thunder.svg";
 import cloudy from "../../assets/Weather-cloudy.svg";
 import Loader from "../Loader/Loader";
-function ComingForcast() {
+function ComingForecast() {
   const { futureData, curDate, futureDataLoading, futureDataError } =
     useWeatherPost();
   if (!futureData) return;
@@ -25,19 +25,19 @@ function ComingForcast() {
   if (futureDataError) return;
   return (
     <div className={styles.upComing}>
-      <ul className={styles.forcastList}>
+      <ul className={styles.forecastList}>
         {futureData.forecastday.map((data) => (
-          <li className={styles.forcast} key={data.date}>
-            <p className={styles.forcastDay}>
+          <li className={styles.forecast} key={data.date}>
+            <p className={styles.forecastDay}>
               {curDate === data.date
                 ? "Today"
                 : new Date(data.date).toLocaleDateString("en-US", {
                     weekday: "long",
                   })}
             </p>
-            <span className={styles.forcastDate}>{data.date}</span>
+            <span className={styles.forecastDate}>{data.date}</span>
             <img
-              className={styles.forcastImage}
+              className={styles.forecastImage}
               src={getWeatherCon(data.day.condition.code)}
               alt=""
               loading="lazy"
@@ -56,4 +56,4 @@ function ComingForcast() {
   );
 }
 
-export default ComingForcast;
+export default ComingForecast;
