@@ -1,11 +1,15 @@
+import useWeatherPost from "../../context/useWeatherPost";
 import styles from "./Logo.module.css";
-import logo from "../../assets/Logo.avif";
 function Logo() {
+  const { openSearch } = useWeatherPost();
   return (
-    <div className={styles.logo}>
-      {/* <img src={logo} alt="Logo" /> */}
-      <h1>Nimbus</h1>
-    </div>
+    <>
+      {!openSearch && (
+        <div className={styles.logo}>
+          <h1>Nimbus</h1>
+        </div>
+      )}
+    </>
   );
 }
 

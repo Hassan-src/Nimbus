@@ -4,6 +4,7 @@ import useFutureForcast from "../hooks/useFutureForcast";
 
 const WeatherContext = createContext();
 function MainProvider({ children }) {
+  const [openSearch, setOpenSearch] = useState(false);
   const [search, setSearch] = useState("");
   const [city, setCity] = useState("New York");
   const {
@@ -58,6 +59,8 @@ function MainProvider({ children }) {
         search,
         setSearch,
         setCity,
+        openSearch,
+        setOpenSearch,
       }}
     >
       {children}

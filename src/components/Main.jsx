@@ -24,7 +24,12 @@ function Main({ children }) {
   const weatherBackground = getWeatherBg(curWeatherConditionCode, isDay);
   return (
     <main className={styles.main}>
-      <img className={styles.bg} src={weatherBackground} alt="weather" />
+      <img
+        className={styles.bg}
+        src={weatherBackground}
+        alt="weather"
+        loading="eager"
+      />
       {children}
     </main>
   );

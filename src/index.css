@@ -45,8 +45,8 @@
 html,
 body,
 #root {
-  width: 100%;
-  height: 100%;
+  width: 100dvw;
+  height: 100dvh;
 }
 #root {
   display: flex;
@@ -108,4 +108,19 @@ button {
     cursor: pointer;
     box-shadow: 0 0 15px 1px rgb(56, 189, 248);
   }
+}
+::-webkit-scrollbar {
+  width: 0.1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px grey;
+  border-radius: var(--border-radius);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--bg-color);
+  border-radius: var(--border-radius);
 }

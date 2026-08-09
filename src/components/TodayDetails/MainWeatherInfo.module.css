@@ -1,6 +1,6 @@
 .mainWeather {
-  width: 90%;
-  height: 90%;
+  width: 90dvw;
+  height: 90dvh;
   position: relative;
   display: flex;
   border-radius: var(--border-radius);
@@ -9,4 +9,11 @@
     rgb(0, 0, 0, 0.6) 0%,
     rgb(58, 64, 64, 0.1) 100%
   );
+}
+@media only screen and (max-width: 600px) {
+  .mainWeather {
+    width: 100dvw;
+    height: 100dvh;
+    flex-direction: column;
+  }
 }

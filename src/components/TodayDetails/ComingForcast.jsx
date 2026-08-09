@@ -7,8 +7,10 @@ import snowy from "../../assets/Weather-snow.svg";
 import storm from "../../assets/Weather-storm.svg";
 import thunderStorm from "../../assets/Weather-thunder.svg";
 import cloudy from "../../assets/Cloudy.svg";
+import Loader from "../Loader/Loader";
 function ComingForcast() {
-  const { futureData, curDate } = useWeatherPost();
+  const { futureData, curDate, futureDataLoading, futureDataError } =
+    useWeatherPost();
   if (!futureData) return;
   function getWeatherCon(code) {
     if (code === 1000) return sunny;
@@ -19,6 +21,8 @@ function ComingForcast() {
     if (code >= 1210 && code <= 1264) return snowy;
     if (code >= 1273) return thunderStorm;
   }
+  if (futureDataLoading) return <Loader />;
+  if (futureDataError) return;
   return (
     <div className={styles.upComing}>
       <ul className={styles.forcastList}>
@@ -36,10 +40,13 @@ function ComingForcast() {
               className={styles.forcastImage}
               src={getWeatherCon(data.day.condition.code)}
               alt=""
+              loading="lazy"
             />
             <span className={styles.highTemp}>
-              {data.day.maxtemp_c}°
-              <span className={styles.lowTemp}>{data.day.mintemp_c}°</span>
+              {Math.round(data.day.maxtemp_c)}°
+              <span className={styles.lowTemp}>
+                {Math.round(data.day.mintemp_c)}°
+              </span>
             </span>
             <p className={styles.weatherCondition}>{data.day.condition.text}</p>
           </li>

@@ -10,6 +10,7 @@ import snowy from "../../assets/Weather-snow.svg";
 import storm from "../../assets/Weather-storm.svg";
 import thunderStorm from "../../assets/Weather-thunder.svg";
 import cloudy from "../../assets/Cloudy.svg";
+import Loader from "../Loader/Loader";
 
 function TodayDetails() {
   const {
@@ -21,6 +22,10 @@ function TodayDetails() {
     todayDataMaxTemp,
     todayDataMinTemp,
     curTemp,
+    futureDataLoading,
+    futureDataError,
+    cityLoading,
+    cityError,
   } = useWeatherPost();
 
   function getWeatherCon(code, isDay) {
@@ -33,6 +38,8 @@ function TodayDetails() {
     if (code >= 1273) return thunderStorm;
   }
   const weather = getWeatherCon(curWeatherConditionCode, isDay);
+  if (futureDataLoading || cityLoading) return <Loader />;
+  if (cityError || futureDataError) return;
   return (
     <div className={styles.leftSide}>
       <img className={styles.weatherImage} src={weather} alt="WeatherType" />

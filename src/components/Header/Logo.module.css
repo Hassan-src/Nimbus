@@ -5,7 +5,6 @@
   display: flex;
   align-items: center;
   padding: var(--spacing-sm);
-  gap: var(--spacing-md);
   background: transparent;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -26,9 +25,19 @@
     font-weight: 700;
     letter-spacing: 0.1rem;
   }
-  img {
-    width: 42px;
-    height: 42px;
-    object-fit: contain;
+}
+@media only screen and (max-width: 600px) {
+  .logo {
+    margin: var(--spacing-xsm);
+    h1 {
+      font-size: 1.2rem;
+    }
+  }
+}
+@media only screen and (max-width: 400px) {
+  .logo {
+    h1 {
+      font-size: 1rem;
+    }
   }
 }

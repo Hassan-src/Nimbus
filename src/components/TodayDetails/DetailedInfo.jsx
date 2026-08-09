@@ -6,6 +6,7 @@ import sunRise from "../../assets/Sunrise.svg";
 import rain from "../../assets/Rain.svg";
 import droplet from "../../assets/Droplet.svg";
 import wind from "../../assets/Wind.svg";
+import Loader from "../Loader/Loader";
 
 function DetailedInfo() {
   const {
@@ -14,40 +15,71 @@ function DetailedInfo() {
     curHumidity,
     todaySunRise,
     todaySunSet,
+    futureDataLoading,
+    cityLoading,
+    cityError,
+    futureDataError,
   } = useWeatherPost();
+  if (futureDataLoading || cityLoading) return <Loader />;
+  if (cityError || futureDataError) return;
   return (
     <div className={styles.rightSide}>
       <ul className={styles.infoList}>
         <li className={styles.weatherDetails}>
-          <img className={styles.detailsImage} src={droplet} alt="" />
+          <img
+            className={styles.detailsImage}
+            src={droplet}
+            alt="droplet"
+            loading="lazy"
+          />
           <div className={styles.weatherDetailsText}>
             <span className={styles.title}>Humidity:</span>
             <span className={styles.info}>{curHumidity}%</span>
           </div>
         </li>
         <li className={styles.weatherDetails}>
-          <img className={styles.detailsImage} src={rain} alt="" />
+          <img
+            className={styles.detailsImage}
+            src={rain}
+            alt="rain"
+            loading="lazy"
+          />
           <div className={styles.weatherDetailsText}>
             <span className={styles.title}>precipitation:</span>
             <span className={styles.info}>{curChanceRain}%</span>
           </div>
         </li>
         <li className={styles.weatherDetails}>
-          <img className={styles.detailsImage} src={wind} alt="" />
+          <img
+            className={styles.detailsImage}
+            src={wind}
+            alt="wind"
+            loading="lazy"
+          />
           <div className={styles.weatherDetailsText}>
             <span className={styles.title}>Wind speed:</span>
             <span className={styles.info}>{curWindSpeed}MPH</span>
           </div>
         </li>
         <li className={styles.weatherDetails}>
-          <img className={styles.detailsImage} src={sunRise} alt="" />
+          <img
+            className={styles.detailsImage}
+            src={sunRise}
+            alt="sunrise"
+            loading="lazy"
+          />
           <div className={styles.weatherDetailsText}>
             <span className={styles.title}>Sunrise:</span>
             <span className={styles.info}>{todaySunRise}</span>
           </div>
         </li>
         <li className={styles.weatherDetails}>
-          <img className={styles.detailsImage} src={sunSet} alt="" />
+          <img
+            className={styles.detailsImage}
+            src={sunSet}
+            alt="sunset"
+            loading="lazy"
+          />
           <div className={styles.weatherDetailsText}>
             <span className={styles.title}>Sunset:</span>
             <span className={styles.info}>{todaySunSet}</span>
