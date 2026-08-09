@@ -183,7 +183,7 @@ easier to maintain and extend.
 
 ### Mobile
 
-<img src="./docs/images/Mobile.png" alt="Nimbus mobile preview" width="100%" />
+<img src="./docs/images/Mobile.jpg" alt="Nimbus mobile preview" width="100%" />
 
 ---
 
