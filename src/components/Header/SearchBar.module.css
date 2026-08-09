@@ -96,9 +96,9 @@
     .searchBar {
       width: 325px;
     }
-    .searchBoxButton {
-      right: 36px;
-    }
+  }
+  .searchBoxButton {
+    right: 16px;
   }
 }
 @keyframes searchOpen {

@@ -55,7 +55,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    transform: translateY(350px);
+    transform: translateY(320px);
     padding: var(--spacing-xsm);
     justify-content: flex-start;
     align-items: center;

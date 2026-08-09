@@ -46,6 +46,7 @@
       }
       .location {
         font-size: 0.8rem;
+        margin-bottom: var(--spacing-sm);
       }
     }
     .weatherImage {

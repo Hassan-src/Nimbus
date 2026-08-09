@@ -99,18 +99,6 @@ between:
 
 ---
 
-## 🖥️ Preview
-
-### Desktop
-
-<img src="./docs/images/Desktop.png" alt="Nimbus desktop preview" width="100%" />
-
-### Mobile
-
-<img src="./docs/images/Mobile.png" alt="Nimbus mobile preview" width="100%" />
-
----
-
 ## 🛠️ Tech Stack
 
 <div align="center">
@@ -191,11 +179,11 @@ easier to maintain and extend.
 
 ### Desktop
 
-<img src="./public/images/desktop.png" alt="Nimbus desktop preview" width="100%" />
+<img src="./docs/images/Desktop.png" alt="Nimbus desktop preview" width="100%" />
 
 ### Mobile
 
-<img src="./public/images/mobile.png" alt="Nimbus mobile preview" width="100%" />
+<img src="./docs/images/Mobile.png" alt="Nimbus mobile preview" width="100%" />
 
 ---
 
@@ -258,39 +246,6 @@ useFutureForecast
 ```
 
 This keeps API and weather-related logic separate from the presentation layer.
-
----
-
-## 🏛️ Project Architecture
-
-Nimbus follows a component-based React architecture with shared weather
-state managed through Context and API logic separated into custom hooks.
-
-```text
-src/
-│
-├── components/
-│   ├── SearchBar/
-│   ├── WeatherInfo/
-│   ├── WeatherDetails/
-│   └── Forecast/
-│
-├── context/
-│   └── WeatherContext.jsx
-│
-├── hooks/
-│   ├── useCityWeatherCurrent.js
-│   └── useFutureForecast.js
-│
-├── services/
-│   └── weatherApi.js
-│
-├── styles/
-│   └── global.css
-│
-├── App.jsx
-└── main.jsx
-```
 
 ---
 
@@ -429,21 +384,28 @@ The project aims to provide:
 Nimbus/
 │
 ├── public/
-│   └── images/
 │
 ├── src/
 │   ├── components/
-│   │   ├── SearchBar/
-│   │   ├── WeatherInfo/
-│   │   ├── WeatherDetails/
-│   │   └── Forecast/
+│   │   ├── Header/
+│   │   │   ├── Header.jsx
+│   │   │   ├── Logo.jsx
+│   │   │   └── SearchBar.jsx
+│   │   ├── Loader/
+│   │   │   └── Loader.jsx
+│   │   └── TodayDetails/
+│   │       ├── ComingForecast.jsx
+│   │       ├── DetailedInfo.jsx
+│   │       ├── MainWeatherInfo.jsx
+│   │       └──  TodayDetails.jsx
 │   │
 │   ├── context/
-│   │   └── WeatherContext.jsx
+│   │   ├── MainProvider.jsx
+│   │   └──  useWeatherPost.jsx
 │   │
 │   ├── hooks/
-│   │   ├── useCityWeatherCurrent.js
-│   │   └── useFutureForecast.js
+│   │   ├── useCityWeatherCurrent.jsx
+│   │   └── useFutureForecast.jsx
 │   │
 │   ├── services/
 │   │   └── api.js
