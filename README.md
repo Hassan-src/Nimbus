@@ -220,41 +220,6 @@ test, and extend.
 
 ---
 
-## 🔐 Environment Variables
-
-API credentials should never be committed directly to the repository.
-
-Create a local `.env` file:
-
-```env
-VITE_WEATHER_API_KEY=your_api_key_here
-```
-
-The variable can then be accessed through Vite:
-
-```javascript
-const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
-```
-
-Make sure `.env` is included in `.gitignore`:
-
-```gitignore
-.env
-.env.local
-.env.*.local
-```
-
-For other developers, provide a `.env.example` file:
-
-```env
-VITE_WEATHER_API_KEY=
-```
-
-This allows developers to configure their own API key without exposing
-credentials in the repository.
-
----
-
 ## 📱 Responsive Design
 
 Nimbus is designed to work across different screen sizes.
