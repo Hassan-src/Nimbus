@@ -6,7 +6,7 @@ import partlyCloudy from "../../assets/Weather-partlycloudy.svg";
 import snowy from "../../assets/Weather-snow.svg";
 import storm from "../../assets/Weather-storm.svg";
 import thunderStorm from "../../assets/Weather-thunder.svg";
-import cloudy from "../../assets/Cloudy.svg";
+import cloudy from "../../assets/cloudy.svg";
 import Loader from "../Loader/Loader";
 function ComingForcast() {
   const { futureData, curDate, futureDataLoading, futureDataError } =
