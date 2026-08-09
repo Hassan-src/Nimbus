@@ -98,7 +98,7 @@
     }
   }
   .searchBoxButton {
-    right: 16px;
+    right: 50px;
   }
 }
 @keyframes searchOpen {
